@@ -1,0 +1,120 @@
+@import url(./fonts.css);
+
+*{
+  font-family: 'Nanum Gothic', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 16px;
+}
+
+body{
+  margin: 0; 
+}
+
+#container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #030A8C;
+}
+
+.app{
+  width: 320px;
+}
+
+.app h1{
+  font-size: 1.125rem;
+  text-align: center;
+  padding: 10px 5px;
+  background-color: #fff;
+}
+
+.todo-list{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  overflow-y: auto;
+  height: 480px;
+  padding: 20px;
+  background-color: #2E38F2;
+}
+
+.todo-list li{
+  cursor: pointer;
+  position: relative;
+  list-style-type: none;
+  max-width: 200px;
+  padding: 8px;
+  background-color: rgb(254, 229, 77);
+  border-radius: 8px;
+}
+
+.todo-list li:not(:first-child) {
+  margin-top: 20px;
+}
+
+.todo-list li::after{
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: -10px;
+  width: 0;
+  height: 0; 
+  border-bottom: 16px solid transparent;
+  border-left: 16px solid rgb(254, 229, 77);
+}
+
+.todo-list li span{
+  position: absolute;
+  left: -25px;
+  bottom: 2px;
+  width: 16px; 
+  height: 16px;
+  line-height: 14px;
+  text-align: center;
+  border-radius: 8px;
+  background-color: rgb(234, 234, 234);
+}
+
+form{
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  bottom: 0;
+}
+input{
+  font-size: 1.4em;
+  margin: 0;
+  border: none;
+  height: 45px;
+}
+input[type="text"]{
+  width: 240px;
+  padding-left: 10px;
+  font-size: 1rem;
+}
+input[type="text"]:focus{
+  outline: none;
+}
+input[type="submit"]{
+  cursor: pointer;
+  width: 80px;
+  font-size: 1rem;
+  background-color: rgb(254, 229, 77);
+}
+
+.done{
+  text-decoration: line-through;
+  text-decoration-color: red;
+  text-decoration-thickness: 5px;
+  background-color: rgb(234, 234, 234);
+}
+
+.done::after{
+  border-left: 16px solid rgb(234, 234, 234);
+}
