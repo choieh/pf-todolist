@@ -7,7 +7,7 @@ git-pages : https://choieh.github.io/pf-todolist/
 ### spec
 - HTML5, CSS, js
 - 크로스브라우징 : Chrome, firefox, edge, safari
-- 할일 목록 `localStorege` 에 저장
+- 할일 목록 `localStorage` 에 저장
 - 목록 내용 추가, 수정, 삭제 가능
 
 ### screen shot
